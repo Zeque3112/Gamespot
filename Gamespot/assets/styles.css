@@ -1,0 +1,130 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-header{
+    background-color: #ff0000;  /* Fondo rojo */
+    color: white;
+    height: 150px;                /* Altura del encabezado */
+    display: flex;                /* Usa Flexbox para centrar */
+    justify-content: center;      /* Centra horizontalmente */
+    align-items: center;          /* Centra verticalmente */
+    padding: 10px;                
+    border: 5px solid;            /* Borde del bloque*/  
+    border-radius: 25px;          /* Redondeado del borde*/
+}
+
+.logo-centrado{
+    max-height: 120px;          /* Altura máxima del logo */
+    max-width: 100%;            /* Ancho adaptable */
+}
+
+.game-news{
+    flex: 1;
+    color: lightgray;
+    height: 600px;
+    width: 100%;
+    display: flex;
+}
+
+.important-news{
+    position: relative;
+    flex: 2;
+    background-color: rgb(247, 235, 235);
+    color: white;
+    border: 5px solid;
+    border-radius: 25px;
+    max-height: 585px;
+}
+
+.noticia{
+    display: none;
+    color: white;
+    height: 100%;
+}
+
+.noticia.activa{
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.side-news{
+    flex: 1;
+    background-color: rgb(242, 245, 204);
+    color: white;
+    border: 5px solid;
+    border-radius: 25px;
+    max-height: 585px;
+}
+
+.news-image-container {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.news-image {
+    width: 99.6%;
+    max-height: 582px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #444;
+    transition: transform 0.3s;
+}
+
+.news-image:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.caption-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    right: 1;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro con 70% opacidad */
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.news-title {
+    color: white;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.image-with-caption:hover .caption-overlay {
+    background: rgba(0, 0, 0, 0.8); /* Oscurece al pasar el mouse */
+    transition: background 0.3s ease;
+}
