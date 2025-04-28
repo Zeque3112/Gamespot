@@ -56,6 +56,39 @@ body, html{
     display: block;
 }
 
+.news-image-container {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.news-image {
+    width: 99.6%;
+    max-height: 582px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #444;
+    transition: transform 0.3s;
+}
+
+.caption-overlay {
+    margin-bottom: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    right: 1;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro con 70% opacidad */
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.news-title {
+    color: white;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 .arrow {
     position: absolute;
     top: 50%;
@@ -78,53 +111,28 @@ body, html{
     right: 10px;
 }
 
-.side-news{
+.games-rank{
     flex: 1;
-    background-color: rgb(242, 245, 204);
+    background-color: rgb(255, 181, 71);
     color: white;
     border: 5px solid;
     border-radius: 25px;
     max-height: 585px;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.news-image-container {
-    margin-bottom: 15px;
-    position: relative;
+.rank-title{
+    text-align: center;
+    color: black;
 }
 
-.news-image {
-    width: 99.6%;
-    max-height: 582px;
-    object-fit: cover;
+.ranked-game{
+    height: 20%;
+    padding: 20px;
+    border: 5px solid rgb(255, 181, 71);
+    border-radius: 5px;
+    background-color: rgb(219, 219, 202);
     border-radius: 8px;
-    border: 2px solid #444;
-    transition: transform 0.3s;
-}
-
-.news-image:hover{
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-.caption-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 1;
-    right: 1;
-    background: rgba(0, 0, 0, 0.7); /* Fondo negro con 70% opacidad */
-    padding: 12px 20px;
-    border-radius: 8px;
-}
-
-.news-title {
-    color: white;
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.image-with-caption:hover .caption-overlay {
-    background: rgba(0, 0, 0, 0.8); /* Oscurece al pasar el mouse */
-    transition: background 0.3s ease;
 }
